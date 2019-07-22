@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "build:watch": "rollup -c --watch"
   },
   "repository": {
     "type": "git",
@@ -32,9 +33,12 @@
   },
   "homepage": "https://github.com/open-tech-world/create-react-app#readme",
   "dependencies": {
-    "chalk": "^2.4.2"
+    "chalk": "^2.4.2",
+    "inquirer": "^6.5.0"
   },
   "devDependencies": {
+    "@types/inquirer": "^6.0.3",
+    "@types/node": "^12.6.8",
     "rollup": "^1.17.0",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-copy": "^3.0.0",
