@@ -13,6 +13,16 @@ export default (projectName: string): Questions => {
       name: "typescript",
       message: "Typescript support(.ts, .tsx)",
       default: true
-    }
+    },
+    {
+      type: "input",
+      name: "authorFullName",
+      message: "Author full name: ",
+    },
+    {
+      type: "input",
+      name: "authorEmail",
+      message: "Author email: ",
+    },
   ];
 };

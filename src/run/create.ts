@@ -4,9 +4,7 @@ import mkdirp from 'mkdirp';
 import globby from 'globby';
 import ejs from 'ejs';
 
-import IOptions from './IOptions';
-
-export default async function create(projectPath: string, options: IOptions) {
+export default async function create(projectPath: string, options: object) {
   mkdirp.sync(projectPath);
   const templatesPath = path.join(__dirname, 'templates');
   const paths = globby.sync('*', { cwd: templatesPath });
