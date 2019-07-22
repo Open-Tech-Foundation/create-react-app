@@ -2,9 +2,15 @@
   "name": "@open-tech-world/create-react-app",
   "version": "0.0.0",
   "description": "Creates a react app.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "bin": "cli.js",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -24,5 +30,17 @@
   "bugs": {
     "url": "https://github.com/open-tech-world/create-react-app/issues"
   },
-  "homepage": "https://github.com/open-tech-world/create-react-app#readme"
+  "homepage": "https://github.com/open-tech-world/create-react-app#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "rollup": "^1.17.0",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-copy": "^3.0.0",
+    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-typescript2": "^0.22.0",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.5.3"
+  }
 }
