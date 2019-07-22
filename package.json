@@ -1,0 +1,28 @@
+{
+  "name": "@open-tech-world/create-react-app",
+  "version": "0.0.0",
+  "description": "Creates a react app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/open-tech-world/create-react-app.git"
+  },
+  "keywords": [
+    "create",
+    "react",
+    "app"
+  ],
+  "author": {
+    "name": "Thanga Ganapathy",
+    "email": "ganapathy888@gmail.com",
+    "url": "https://github.com/ganapathy888"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/open-tech-world/create-react-app/issues"
+  },
+  "homepage": "https://github.com/open-tech-world/create-react-app#readme"
+}
