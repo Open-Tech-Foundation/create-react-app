@@ -10,5 +10,6 @@ export default async function run() {
   const projectName: string = path.basename(projectPath);
   const options = await inquirer.prompt(questions(projectName));
   create(projectPath, options);
-  installDeps(projectPath, options.npmClient);
+  await installDeps(projectPath, options.npmClient);
+  console.log('Done!')
 }
