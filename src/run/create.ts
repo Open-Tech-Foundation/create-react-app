@@ -8,11 +8,17 @@ export default async function create(projectPath: string, options: object) {
   mkdirp.sync(projectPath);
   const templatesPath = path.join(__dirname, 'templates');
   const paths = globby.sync('**', { cwd: templatesPath });
+  const copyFiles = ['index.html'];
   paths.forEach(f => {
     const str = readFileSync(path.join(templatesPath, f), 'utf8');
-    const compiledStr = ejs.render(str, options);
+    let outStr = '';
+    if (copyFiles.includes(f)) {
+      outStr = str;
+    } else {
+      outStr = ejs.render(str, options);
+    }
     const outFile = path.join(projectPath, f.replace('.ejs', ''));
     mkdirp.sync(path.dirname(outFile));
-    writeFileSync(outFile, compiledStr);
+    writeFileSync(outFile, outStr);
   });
 }
