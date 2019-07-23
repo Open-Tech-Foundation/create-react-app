@@ -1,5 +1,5 @@
 import React from 'react';
-import LandingPageImg from '../media/undraw_landing_page.svg';
+import LandingPageImg from './undraw_landing_page.svg';
 
 export default () => {
   return (
