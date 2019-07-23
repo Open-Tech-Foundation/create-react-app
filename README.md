@@ -8,16 +8,11 @@ Run any one of the following command to start creating your app.
 
 ```sh
 # With npx
-$ npx @open-tech-world/create-react-app [path-to-your-project]
+$ npx @open-tech-world/create-react-app [your-app-name]
 
 # With npm
-$ npm init @open-tech-world/react-app [path-to-your-project]
+$ npm init @open-tech-world/react-app [your-app-name]
 
 # With yarn
-$ yarn create @open-tech-world/react-app [path-to-your-project]
-```
-
-### Eg:
-```sh
-$ npx @open-tech-world/create-react-app my-app
+$ yarn create @open-tech-world/react-app [your-app-name]
 ```

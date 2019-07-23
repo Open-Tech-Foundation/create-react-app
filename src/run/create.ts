@@ -4,8 +4,9 @@ import mkdirp from 'mkdirp';
 import globby from 'globby';
 import ejs from 'ejs';
 
-export default async function create(projectPath: string, options: object) {
-  mkdirp.sync(projectPath);
+import IOptions from './IOptions';
+
+export default async function create(options: IOptions) {
   const templatesPath = path.join(__dirname, 'templates');
   const paths = globby.sync('**', { cwd: templatesPath });
   const copyFiles = ['index.html'];
@@ -17,7 +18,7 @@ export default async function create(projectPath: string, options: object) {
     } else {
       outStr = ejs.render(str, options);
     }
-    const outFile = path.join(projectPath, f.replace('.ejs', ''));
+    const outFile = path.join(options.projectName, f.replace('.ejs', ''));
     mkdirp.sync(path.dirname(outFile));
     writeFileSync(outFile, outStr);
   });
