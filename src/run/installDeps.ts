@@ -4,11 +4,13 @@ export default async function installDeps(
   projectPath: string,
   npmClient: string
 ) {
+  console.log('Installing npm packages...')
   const devDeps = [
     'webpack',
     'webpack-cli',
     'webpack-dev-server',
     'html-webpack-plugin',
+    'clean-webpack-plugin',
     '@babel/core',
     'babel-loader',
     '@babel/preset-env',
