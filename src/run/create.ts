@@ -5,6 +5,7 @@ import globby from 'globby';
 import ejs from 'ejs';
 
 import IOptions from './IOptions';
+import createGitIgnore from './createGitIgnore';
 
 function copyFiles(templatesPath: string, paths: string[], options: IOptions) {
   const copyOnlyFiles = ['index.html'];
@@ -35,4 +36,5 @@ export default async function create(options: IOptions) {
     cwd: langTemplatesPath,
   });
   copyFiles(langTemplatesPath, langPaths, options);
+  createGitIgnore(options.projectName);
 }
