@@ -2,10 +2,8 @@ import path from 'path';
 import execa from 'execa';
 import IOptions from './IOptions';
 
-export default async function installDeps(options: IOptions) {
-  console.log('Installing packages...');
-  const cwd = path.join(process.cwd(), options.projectName);
-  const devDeps = [
+function getDevDeps(options: IOptions) {
+  const deps = [
     'webpack',
     'webpack-cli',
     'webpack-dev-server',
@@ -15,11 +13,26 @@ export default async function installDeps(options: IOptions) {
     'babel-loader',
     '@babel/preset-env',
     '@babel/preset-react',
-    '@babel/preset-typescript',
     'style-loader',
     'css-loader',
     'file-loader',
   ];
+  if (options.typescript) {
+    return deps.concat([
+      '@babel/preset-typescript',
+      '@types/react',
+      '@types/react-dom',
+      'tslint-plugin-prettier',
+      'tslint-config-prettier',
+    ]);
+  }
+  return deps;
+}
+
+export default async function installDeps(options: IOptions) {
+  console.log('Installing packages...');
+  const cwd = path.join(process.cwd(), options.projectName);
+  const devDeps = getDevDeps(options);
   const devDepsCmd =
     options.npmClient === 'npm' ? `npm install --save-dev` : `yarn add --dev`;
   try {
