@@ -1,6 +1,6 @@
 {
   "name": "@open-tech-world/create-react-app",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Creates a react app.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
