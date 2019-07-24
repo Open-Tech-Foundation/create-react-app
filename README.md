@@ -2,6 +2,11 @@
 
 > Creates a configurable React app.
 
+## Features
+
+- Zero config to get started
+- Typescript support
+
 ## Getting started
 
 Run any one of the following command to start creating your app.
