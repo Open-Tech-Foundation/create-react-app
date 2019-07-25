@@ -22,6 +22,7 @@ function getDevDeps(options: IOptions) {
       '@babel/preset-typescript',
       '@types/react',
       '@types/react-dom',
+      'tslint',
       'tslint-plugin-prettier',
       'tslint-config-prettier',
     ]);
