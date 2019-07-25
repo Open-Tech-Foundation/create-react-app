@@ -1,6 +1,6 @@
 # @open-tech-world/create-react-app
 
-> Creates a configurable React app.
+> Create react apps with optional build config.
 
 ## Features
 
