@@ -7,6 +7,7 @@
 - Zero config to get started
 - Typescript support
 - Completely customizable
+- Display error overlay in app
 
 ## Getting started
 
