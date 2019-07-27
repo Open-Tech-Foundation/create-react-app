@@ -9,6 +9,7 @@ function getDevDeps(options: IOptions) {
     'webpack-dev-server',
     'html-webpack-plugin',
     'clean-webpack-plugin',
+    'error-overlay-webpack-plugin',
     '@babel/core',
     'babel-loader',
     '@babel/preset-env',
