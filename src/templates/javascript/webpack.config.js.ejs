@@ -10,6 +10,10 @@ module.exports = {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'build'),
   },
+  devtool: 'cheap-module-source-map',
+  devServer: {
+    historyApiFallback: true,
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
